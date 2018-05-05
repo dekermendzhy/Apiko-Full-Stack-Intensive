@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   loadData() {
-    const newPosts = data.slice(0, 10)
+    const newPosts = data.slice(this.state.posts.length, this.state.posts.length + 10)
     this.setState(prevState => ({
       posts: prevState.posts.concat(newPosts)
     }));
